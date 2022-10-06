@@ -1,0 +1,33 @@
+spring:
+  datasource:
+    url: jdbc:mysql://34.96.131.11:3306/kyc_demo?serverTimezone=UTC&characterEncoding=utf8&useUnicode=true&useSSL=false
+    username: root
+    password: x($,\GH"_{SrP/L0
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  mail:
+    username: metalinksofficial@gmail.com
+    password: yvurnakpvymydhet
+    freemarker:
+      cache: false
+  # redis相關
+  redis:
+    host: redis-dev
+    database: 0
+#    timeout: 100000
+logging:
+  level:
+    root: INFO
+    com:
+      wanda: INFO
+project:
+  host-name: kyc.demo
+env:
+  platform:
+    profile: prod
+    code: kyc_demo
+    en-name: BistreetX_kyc_demo
+    tw-name: BistreetX_kyc_demo
+    cn-name: BistreetX_kyc_demo
+  gcp.bucket: kyc-project-349915-image
+  gcp.token: upload/gcp-bucket-dev.json
+  gcp.image-url: https://kyc-backend.snailloop.com/bucket

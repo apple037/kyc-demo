@@ -1,0 +1,42 @@
+spring:
+  application:
+    name: app
+  profiles:
+    active: ${PROFILE_NAME}
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    properties:
+      mail.smtp.auth: true
+      mail.smtp.starttls.enable: true
+      mail.smtp.starttls.required: true
+  freemarker:
+    suffix: .html
+    charset: UTF-8
+    template-loader-path: classpath:/mail-template/
+  servlet.multipart.maxFileSize: 10MB
+  servlet.multipart.maxRequestSize: 10MB
+# 分頁框架
+pagehelper:
+  # 指定數據庫
+  helperDialect: mysql
+  # pageNum <= 0 顯示第一頁；超過 pageSize 顯示最後一頁
+  reasonable: true
+  # 配置參數屬性名：pageNum, pageSize, count
+  params: count=countSql
+  # 自動從mapper方法取得參數屬性名：pageNum, pageSize, count
+  supportMethodsArguments: true
+server:
+  port: 7001
+  servlet:
+    context-path: /app
+#    session:
+#      timeout: 120m
+#      cookie:
+#        path: /
+mybatis:
+  configuration:
+    map-underscore-to-camel-case: true
+
+
+

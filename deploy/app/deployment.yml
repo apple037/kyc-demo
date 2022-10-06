@@ -1,0 +1,33 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+#改
+      app: app
+  template:
+    metadata:
+      labels:
+#改
+        app: app
+    spec:
+      containers:
+#改
+      - name: app-webapp
+        image: 548316749193.dkr.ecr.ap-northeast-2.amazonaws.com/cowcow-dev:0
+        ports:
+        - name: prot
+#改
+          containerPort: 7001
+#        livenessProbe:
+#          httpGet:
+#            path: client/hb
+#            port: prot
+#          initialDelaySeconds: 15
+#          periodSeconds: 30
+#          timeoutSeconds: 30
+#          successThreshold: 1
+#          failureThreshold: 3

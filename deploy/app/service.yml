@@ -1,0 +1,18 @@
+apiVersion: v1
+kind: Service
+metadata:
+#改
+  name: app-service
+  namespace: default
+spec:
+  type: NodePort
+  ports:
+#改
+  - nodePort: 31111
+    port: 7001
+    protocol: TCP
+    #改
+    targetPort: 7001
+  selector:
+#改
+    app: app

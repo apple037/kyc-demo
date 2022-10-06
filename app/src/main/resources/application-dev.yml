@@ -1,0 +1,25 @@
+spring:
+  datasource:
+    url: jdbc:mysql://34.150.72.204:3306/nft_ex?serverTimezone=UTC&characterEncoding=utf8&useUnicode=true&useSSL=false
+    username: root
+    password: hp5jL81fj5Kni3d9
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  # redis相關
+  redis:
+    host: redis
+    database: 0
+#    timeout: 100000
+logging:
+  level:
+    root: INFO
+    com:
+      wanda: INFO
+project:
+  host-name: monsterball.me
+env:
+  platform:
+    profile: dev
+    code: nft-ex
+    en-name: nft-ex
+    tw-name: nft-ex
+    cn-name: nft-ex
